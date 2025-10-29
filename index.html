@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday, My Love!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+  <canvas id="fireworks-canvas"></canvas>
+  <canvas id="balloons-canvas"></canvas>
+  <div id="sparkle-container"></div>
+
+  <!-- Home Section -->
+  <section id="home" class="section active">
+    <main class="birthday-card">
+      <h1>Happy Birthday Pyarii Babuuu 🎂💕</h1>
+      <p>
+        Dear <span class="name">ARUU</span>,<br>
+        Wishing you the sweetest birthday ever!<br>
+        You light up my world like sparkles and confetti.<br>
+        I love you so much🥹❤️🫶!<br>
+        <span class="heart">💖</span>
+      </p>
+      <div class="cake">
+        <div class="cake-body"></div>
+        <div class="candle">
+          <div class="flame"></div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <button onclick="showSection('gallery')" class="nav-btn">Gallery 📸</button>
+        <button onclick="showSection('loveletter')" class="nav-btn">Love Letter 💌</button>
+        <button onclick="showSection('timeline')" class="nav-btn">Memory Timeline 🕰️</button>
+        <button onclick="showSection('minigame')" class="nav-btn">Mini-Game 💘</button>
+        <button onclick="showSection('gifts')" class="nav-btn">Virtual Gifts 🎁</button>
+        <button onclick="showSection('photobooth')" class="nav-btn">Photo Booth 🤳</button>
+        <button onclick="showSection('fireworkspage')" class="nav-btn">Fireworks 🎆</button>
+      </nav>
+    </main>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="section">
+    <main class="gallery-card">
+      <h1>Our Memories Together 💞</h1>
+      <div class="slideshow-container">
+        <img class="slide" src="WhatsApp Image 2025-10-26 at 12.26.27 (1).jpeg" alt="Memory 1">
+        <img class="slide" src="WhatsApp Image 2025-10-26 at 12.26.27.jpeg" alt="Memory 2">
+        <img class="slide" src="WhatsApp Image 2025-10-26 at 12.26.28 (1).jpeg" alt="Memory 3">
+        <img class="slide" src="WhatsApp Image 2025-10-26 at 12.26.28.jpeg" alt="Memory 4">
+        <img class="slide" src="WhatsApp Image 2025-10-26 at 12.26.29 (1).jpeg" alt="Memory 5">
+        <img class="slide" src="WhatsApp Image 2025-10-26 at 12.26.29.jpeg" alt="Memory 6">
+        
+        <!-- Add more photos as needed -->
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+      <button class="nav-btn" onclick="showSection('home')">Back to Home 🎂</button>
+    </main>
+  </section>
+
+  <!-- Love Letter Section -->
+  <section id="loveletter" class="section">
+    <main class="loveletter-card">
+      <h1>My Dearest ARUU</h1>
+      <div class="love-letter" id="letterText"></div>
+      <button class="nav-btn" onclick="showSection('home')">Back to Home 🎂</button>
+    </main>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="section">
+    <main class="timeline-card">
+      <h1>Our Journey Together 🕰️</h1>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2022</div>
+          <div class="timeline-content">
+            <img src="photos/photo1.jpg" alt="First Date">
+            <p>We met and the universe got sweeter 💗</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2023</div>
+          <div class="timeline-content">
+            <img src="photos/photo2.jpg" alt="Vacation">
+            <p>Our first meeting So many memories 🌅</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2024</div>
+          <div class="timeline-content">
+            <img src="photos/photo3.jpg" alt="Birthday">
+            <p>Celebrating your birthday, making new dreams 🎉</p>
+          </div>
+        </div>
+        <!-- Add more timeline-item blocks as you wish -->
+      </div>
+      <button class="nav-btn" onclick="showSection('home')">Back to Home 🎂</button>
+    </main>
+  </section>
+
+  <!-- Mini-Game Section -->
+  <section id="minigame" class="section">
+    <main class="minigame-card">
+      <h1>Catch the Hearts! 💘</h1>
+      <div id="score-display">Score: 0</div>
+      <div class="heart-game-area" id="gameArea"></div>
+      <button class="nav-btn" onclick="startGame()">Restart</button>
+      <button class="nav-btn" onclick="showSection('home')">Back to Home 🎂</button>
+    </main>
+  </section>
+
+  <!-- Virtual Gifts Section -->
+  <section id="gifts" class="section">
+    <main class="gifts-card">
+      <h1>Your Birthday Gifts 🎁</h1>
+      <div class="gift-list">
+        <div class="gift-item">
+          <span class="gift-icon">🌹</span>
+          A bouquet of virtual roses, as beautiful as you!
+        </div>
+        <div class="gift-item">
+          <span class="gift-icon">🍫</span>
+          Endless chocolates for the sweetest girl!
+        </div>
+        <div class="gift-item">
+          <span class="gift-icon">🧸</span>
+          A cuddly teddy bear, ready to hug you anytime.
+        </div>
+        <div class="gift-item">
+          <span class="gift-icon">🎫</span>
+          A coupon for a romantic date—redeem anytime!
+        </div>
+        <div class="gift-item">
+          <span class="gift-icon">💌</span>
+          A promise to love you forever and always.
+        </div>
+      </div>
+      <button class="nav-btn" onclick="showSection('home')">Back to Home 🎂</button>
+    </main>
+  </section>
+
+  <!-- Photo Booth Section -->
+  <section id="photobooth" class="section">
+    <main class="photobooth-card">
+      <h1>Photo Booth 🤳</h1>
+      <input type="file" id="booth-upload" accept="image/*" />
+      <div style="position:relative;display:inline-block;">
+        <img id="booth-preview" src="" alt="Your photo will appear here" />
+        <img id="booth-overlay" class="booth-overlay" src="decorations/heart_frame.png" alt="Heart Frame" style="display:none;" />
+      </div>
+      <div class="booth-caption">Upload your photo and add a sweet birthday frame!</div>
+      <button class="nav-btn" onclick="toggleOverlay()">Toggle Frame</button>
+      <button class="nav-btn" onclick="showSection('home')">Back to Home 🎂</button>
+    </main>
+  </section>
+
+  <!-- Fireworks/Balloons Section -->
+  <section id="fireworkspage" class="section">
+    <main class="fireworks-card">
+      <h1>Celebration Time! 🎇🎈</h1>
+      <div style="margin:14px 0;color:#a1458f;font-size:1.2em;">
+        Enjoy the fireworks and balloons for your special day!
+      </div>
+      <button class="nav-btn" onclick="showSection('home')">Back to Home 🎂</button>
+    </main>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
